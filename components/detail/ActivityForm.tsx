@@ -8,10 +8,13 @@ import type { ActivityTab, NoteType, ActivityFilters } from '@/types';
 // Tabs
 const ACTIVITY_TABS: ActivityTab[] = ['Make note', 'Create event', 'Send text/email', 'Send Videos'];
 
-// Use exact NoteType strings as defined in your types
 const NOTE_TYPES: NoteType[] = [
-  'Verification note',
-  'Sales note'
+  'General note',
+  'Call note',
+  'Appointment note',
+  'Finance note',
+  'Sales note',
+  'Status change',
 ];
 
 const FILTER_KEYS = ['text', 'notes', 'events', 'activity'] as const;
@@ -19,8 +22,7 @@ const FILTER_KEYS = ['text', 'notes', 'events', 'activity'] as const;
 export default function ActivityForm() {
   const [activeTab, setActiveTab] = useState<ActivityTab>('Make note');
   
-  // Use exact NoteType values
-  const [noteType, setNoteType] = useState<NoteType>('Verification note');
+  const [noteType, setNoteType] = useState<NoteType>('General note');
   const [teamMember, setTeamMember] = useState<string>(''); 
   const [noteText, setNoteText] = useState<string>('');
 
