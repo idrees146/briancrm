@@ -1,3 +1,4 @@
+import type { JSX } from 'react';
 import { ACTIVITY_FEED } from '@/data/mockData';
 import type { ActivityType } from '@/types';
 
